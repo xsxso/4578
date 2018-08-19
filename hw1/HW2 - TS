@@ -1,0 +1,113 @@
+////////////interface//////////
+
+interface iFly {
+    Fly (speed: number): void;
+    Land (): boolean;
+  }
+
+
+/////////classes//////////////
+
+  class Airplane implements iFly {
+    Fly (speed : number) {
+        console.log("The speed is " + speed);   
+    };
+    Land () {
+
+        return true;
+    
+    };
+
+    pilot: string = "Brad";
+    airline: string = "American Airlines";
+    destination: string = "Hawaii";
+
+    getInfo(): string {
+        return `The pilot ${this.pilot} working for the airline ${this.airline} is flying to ${this.destination}`;
+      }
+
+  }
+
+
+
+  class Kite implements iFly {
+
+    public Fly (speed : number) {
+        return `${speed}`;
+    };
+    public Land () {
+       
+        return true;
+    };
+
+    color: string = 'red';
+    price: number = 123;
+
+    getInfo(): string {
+        return `The ${this.color} kite costs ${this.price} dollars`;
+      }
+
+  }
+  
+  class Bird implements iFly {
+    public Fly (speed : number) {
+        console.log("The speed is" + speed);   
+    };
+    public Land () {
+     
+        return true;
+    };
+    public birdType: string = 'seagull';
+    public age: string = '12';
+    public color: string = 'black';
+
+
+    getInfo(): string {
+        return `The ${this.birdType} bird is ${this.age} years old and is the color ${this.color} `;
+      }
+  }
+
+
+    function createiFly1() : any {
+        let a: number;
+        a = Math.floor(Math.random() * 3);
+        return a;
+}  
+
+
+    function createiFly2() : any {
+        let a: number;
+        a = Math.floor(Math.random() * 3);
+       
+        if(a==0){
+            let a  = new Kite();
+            console.log(a.getInfo());
+        }
+
+        if(a==1){
+            let b  = new Airplane();
+            console.log(b.getInfo());
+        }
+
+        if(a==2){
+            let c  = new Bird();
+            console.log(c.getInfo());
+        }
+
+    }  
+
+createiFly2();
+
+let iFly: number[] = new Array;
+
+for (let index = 0; index < 10; index++) {
+    iFly.push(createiFly1());
+   }
+
+   console.log(iFly);
+  
+for (let index = 0; index < iFly.length; index++) {
+    let x = new Airplane; 
+    console.log(x.Fly(index));
+    console.log(x.Land());
+   }
