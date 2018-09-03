@@ -1,6 +1,6 @@
 # Addendum to the homework assignment.
 
-* First I added the below items into the `app.component.html`:
+First, I added the below items into the `app.component.html` - 
 
 * Whenever a change happens a `change` event fires on the `select` element. When the `change` event fires the `selectPage` method is executed and is passed into its signature the `event` object. The `event` is then transferred to `app.component.ts`.
 
