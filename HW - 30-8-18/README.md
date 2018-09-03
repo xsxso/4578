@@ -14,11 +14,11 @@ I foremost edited the `app.component.html` file.
     </select>
 	
 ```
-* Inside of `app.component.ts` the `seletPage` function reads the `event` object's `target` property which holds within it the `value` the user chose. 
+* Inside of `app.component.ts` the `selectPage` function reads the `event` object's `target` property which holds within it the `value` the user chose. 
 
 * The `value` is then populated into the variable I declare called `selectedPage`.
 
-* Onward, the `selectedPage` function sends the `selectedPage` to the service located @ `user-request.service.ts`. 
+* Onward, the `selectPage` function sends the `selectedPage` to the service located @ `user-request.service.ts`. 
 
 ```typescript
 
