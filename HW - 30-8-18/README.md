@@ -39,8 +39,7 @@ I foremost edited the `app.component.html` file.
 
 ```
 
-* Inside the service the `selectedPage` vaiable is injected into the service's `showByPageNumber` function.
-
+* Inside the service the `selectedPage` variable is injected into the service's `showByPageNumber` function.
 `ShowByPageNumber` repeats the contructor's `get` request, only this time concatenating the `selectedPage` variable to the URL which it queries, thus yielding different data:
 
 ```typescript
